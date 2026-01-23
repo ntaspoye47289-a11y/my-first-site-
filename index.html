@@ -1,39 +1,149 @@
-<section class="hero">
-  <div class="hero-text">
-    <h1>Nermin Art Studio</h1>
-    <p>Digital Art • Prints • Creative Expression</p>
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>Nermin Art Studio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f6f3ee;
+      color: #2f3e2e;
+    }
+
+    /* ===== HERO COVER ===== */
+    .hero {
+      height: 70vh;
+      background: url("images/IMG_9288.jpeg") center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-text {
+      background: rgba(0,0,0,0.5);
+      color: white;
+      padding: 25px 35px;
+      border-radius: 14px;
+      text-align: center;
+    }
+
+    .hero-text h1 {
+      font-size: 36px;
+      margin: 0 0 10px;
+    }
+
+    .hero-text p {
+      font-size: 16px;
+      opacity: 0.9;
+    }
+
+    /* ===== PRODUCTS ===== */
+    .container {
+      padding: 25px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,.1);
+    }
+
+    .card img {
+      width: 100%;
+      display: block;
+    }
+
+    .info {
+      padding: 15px;
+    }
+
+    .title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .price {
+      color: #5a7a5a;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .btn {
+      display: block;
+      text-align: center;
+      background: #2f3e2e;
+      color: #fff;
+      padding: 10px;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background: #3f5440;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      opacity: .7;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- COVER -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Nermin Art Studio</h1>
+      <p>Digital Art • Prints • Creative Expression</p>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <div class="container">
+    <div class="grid">
+
+      <div class="card">
+        <img src="images/growth.jpg" alt="Growth">
+        <div class="info">
+          <div class="title">Growth</div>
+          <div class="price">EGP 435</div>
+          <a class="btn" href="https://wa.me/201000000000?text=عايز%20شراء%20Growth">
+            اطلب عبر واتساب
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/blossom.jpg" alt="Blossom">
+        <div class="info">
+          <div class="title">Blossom</div>
+          <div class="price">EGP 435</div>
+          <a class="btn" href="https://wa.me/201000000000?text=عايز%20شراء%20Blossom">
+            اطلب عبر واتساب
+          </a>
+        </div>
+      </div>
+
+    </div>
   </div>
-</section>
 
-.hero {
-  height: 70vh;
-  background: url("images/cover.jpg") center/cover no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+  <footer>
+    © 2026 Nermin Art Studio
+  </footer>
 
-.hero-text {
-  background: rgba(0,0,0,0.5);
-  color: white;
-  padding: 20px 30px;
-  border-radius: 12px;
-  text-align: center;
-}
-
-.hero-text h1 {
-  font-size: 36px;
-  margin-bottom: 10px;
-}
-
-<div class="card">
-  <img src="images/flow.jpg" alt="Flow Artwork">
-  <div class="info">
-    <div class="title">Flow</div>
-    <div class="price">EGP 435</div>
-    <a class="btn" href="https://wa.me/201000000000?text=عايز%20أشتري%20Flow">
-      اطلب عبر واتساب
-    </a>
-  </div>
-</div>
-
+</body>
+</html>
