@@ -1,21 +1,138 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
+  <title>Nermin Art Gallery</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Art Gallery</title>
-  <link rel="stylesheet" href="style.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: #f5f5f5;
+      color: #222;
+    }
+
+    /* HEADER */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      background: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    #menu-toggle {
+      display: none;
+    }
+
+    .menu-icon {
+      font-size: 26px;
+      cursor: pointer;
+      display: none;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #222;
+      font-weight: 500;
+    }
+
+    /* HERO */
+    .hero {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .hero img {
+      width: 100%;
+      max-width: 420px;
+      border-radius: 12px;
+      margin-bottom: 25px;
+    }
+
+    .hero h1 {
+      font-size: 26px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      color: #555;
+      line-height: 1.7;
+      margin-bottom: 25px;
+      font-size: 15px;
+    }
+
+    .hero button {
+      background: #111;
+      color: #fff;
+      border: none;
+      padding: 14px 30px;
+      border-radius: 30px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    /* MOBILE MENU */
+    @media (max-width: 768px) {
+      .menu-icon {
+        display: block;
+      }
+
+      nav {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #fff;
+        flex-direction: column;
+        width: 220px;
+        padding: 20px;
+        display: none;
+      }
+
+      #menu-toggle:checked + label + nav {
+        display: flex;
+      }
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 30px 15px;
+      font-size: 13px;
+      color: #777;
+    }
+  </style>
 </head>
+
 <body>
 
-  <!-- Header -->
-  <header class="header">
-    <div class="logo">My Art</div>
+  <!-- HEADER -->
+  <header>
+    <div class="logo">Nermin Art</div>
 
     <input type="checkbox" id="menu-toggle">
     <label for="menu-toggle" class="menu-icon">☰</label>
 
-    <nav class="menu">
+    <nav>
       <a href="#">Home</a>
       <a href="#">Shop</a>
       <a href="#">About</a>
@@ -23,122 +140,34 @@
     </nav>
   </header>
 
-  <!-- Hero Section -->
+  <!-- HERO SECTION -->
   <section class="hero">
-    <img src="IMG_9288.jpeg" alt="Artwork">
-    <div class="hero-text">
-      <h1>أهلًا بيك في عالمي الفني 🎨</h1>
-      <p>
-        أنا فنان بعبر عن مشاعري وأفكاري من خلال اللوحات.
-        هنا هتلاقي أعمال أصلية ونسخ مطبوعة بجودة عالية.
-      </p>
-      <button>تسوّق اللوحات</button>
-    </div>
+    <img src="IMG_9288.jpeg" alt="Nermin Artwork">
+
+    <h1>
+      Welcome to Nermin’s Art World  
+      <br>
+      أهلاً بيك في عالم نرمين الفني
+    </h1>
+
+    <p>
+      I’m Nermin, an artist who expresses emotions, faith, and stories through colors and details.  
+      <br><br>
+      أنا نرمين، فنانة بعبر عن مشاعري وإيماني وحكاياتي من خلال اللوحات والألوان.
+      هنا هتلاقي أعمال فنية أصلية ونسخ مطبوعة بجودة عالية.
+    </p>
+
+    <button>
+      Shop Art Prints | تسوق اللوحات
+    </button>
   </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2026 Nermin Art Gallery — All Rights Reserved  
+    <br>
+    جميع الحقوق محفوظة
+  </footer>
 
 </body>
 </html>
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-}
-
-body {
-  background: #f7f7f7;
-}
-
-/* Header */
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 20px;
-  background: white;
-  position: sticky;
-  top: 0;
-}
-
-.logo {
-  font-weight: bold;
-  font-size: 20px;
-}
-
-.menu {
-  display: flex;
-  gap: 20px;
-}
-
-.menu a {
-  text-decoration: none;
-  color: black;
-}
-
-.menu-icon {
-  display: none;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-#menu-toggle {
-  display: none;
-}
-
-/* Hero */
-.hero {
-  text-align: center;
-  padding: 30px 15px;
-}
-
-.hero img {
-  width: 100%;
-  max-width: 400px;
-  border-radius: 10px;
-}
-
-.hero-text {
-  margin-top: 20px;
-}
-
-.hero-text h1 {
-  margin-bottom: 10px;
-}
-
-.hero-text p {
-  color: #555;
-  margin-bottom: 20px;
-}
-
-.hero-text button {
-  padding: 12px 25px;
-  background: black;
-  color: white;
-  border: none;
-  border-radius: 25px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-/* Mobile Menu */
-@media (max-width: 768px) {
-  .menu {
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background: white;
-    flex-direction: column;
-    width: 200px;
-    display: none;
-    padding: 15px;
-  }
-
-  #menu-toggle:checked + .menu-icon + .menu {
-    display: flex;
-  }
-
-  .menu-icon {
-    display: block;
-  }
-}
